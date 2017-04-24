@@ -9,13 +9,19 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        sh '''echo PATH = ${PATH}
+        sh '''
+
+
+
+echo PATH = ${PATH}
+
 
 
 
 
 
 '''
+        sh 'echo M2_HOME = ${M2_HOME}'
       }
     }
   }

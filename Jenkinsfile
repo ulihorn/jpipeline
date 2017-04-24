@@ -13,8 +13,8 @@ pipeline {
             echo 'Testing..'
             
           },
-          "Build2": {
-            echo 'Building .. 2'
+          "Test2": {
+            echo 'Testing .. 2'
             
           }
         )

@@ -11,6 +11,7 @@ pipeline {
         parallel(
           "Test": {
             echo 'Testing..'
+            sleep 3
             
           },
           "Test2": {

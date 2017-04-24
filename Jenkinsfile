@@ -15,6 +15,7 @@ pipeline {
           },
           "Test2": {
             echo 'Testing .. 2'
+            sleep 5
             
           }
         )

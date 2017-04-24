@@ -1,31 +1,21 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven:3.3.9-jdk-8'
+      args '-v /home/uli/.m2:/root/.m2'
+    }
+    
+  }
   stages {
-    stage('Build') {
+    stage('Initialize') {
       steps {
-        echo 'Building..'
-        sleep 4
-      }
-    }
-    stage('Test') {
-      steps {
-        parallel(
-          "Test": {
-            echo 'Testing..'
-            sleep 3
-            
-          },
-          "Test2": {
-            echo 'Testing .. 2'
-            sleep 5
-            
-          }
-        )
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo 'Deploying....'
+        sh '''echo PATH = ${PATH}
+
+
+
+
+
+'''
       }
     }
   }
